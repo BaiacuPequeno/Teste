@@ -1,1 +1,25 @@
+from random import choice
+from time import sleep
 
+lista = ['Sua sorte esta por vir!', 'Infelizmente hoje não será um dia bom!', 'Acredite em seus objetivos!',
+         'Hoje você terá um noticia boa!', 'Seu futuro está garantido', 'Ele(a) gosta de você... Acredite!',
+         'Banana :)', 'Tente novamente.']
+
+print('Olá! Sou a famosa bola 8 mas feita em python!')
+giro = input('Você gostaria de me girar? [S/N]\n').lower()
+escolha = choice(lista)
+
+if giro == 's':
+    print('-=-' * 5)
+    print('Ok...\n\nGirando...')
+    print('-=-' * 5)
+    sleep(2)
+    print('''\nSua sorte é:
+\033[33m{}\033[m'''.format(escolha))
+
+elif giro == 'n':
+    print('Ok. Sem problemas.')
+
+else:
+    print('Comando inválido!!!\nEncerrando programa!')
+    sleep(3)
