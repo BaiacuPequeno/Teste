@@ -1,10 +1,11 @@
 from time import sleep
 from random import choice, randint, sample
+# from strings import ascii_lowercase, digits
 
-alfa = tuple('abcdefghijklmnopqrstuvwxyzç')
-alfam = tuple('ABCDEFGHIJKLMNOPQRSTUVWXYZÇ')
-simb = tuple('*-+./,/?°]}º[{ª´~^-_=+')
-nuns = tuple('1234567890')
+alfa = 'abcdefghijklmnopqrstuvwxyzç' # alfa = ascii_lowercase + 'ç'
+alfam = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ' # alfam = alfa.upper()
+simb = '*-+./,/?°]}º[{ª´~^-_=+'
+nuns = 1234567890' # digits
 
 senha = []
 temp = randint(1, 4)
