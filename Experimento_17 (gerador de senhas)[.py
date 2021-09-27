@@ -5,7 +5,7 @@ from random import choice, randint, sample
 alfa = 'abcdefghijklmnopqrstuvwxyzç' # alfa = ascii_lowercase + 'ç'
 alfam = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ' # alfam = alfa.upper()
 simb = '*-+./,/?°]}º[{ª´~^-_=+'
-nuns = 1234567890' # nuns = digits
+nuns = '1234567890' # nuns = digits
 
 senha = []
 temp = randint(1, 4)
@@ -84,7 +84,7 @@ nun = input("Quer que sua senha contenha números?\n[S]im\n[N]ão\n").lower()
 print(
 
 )
-while num not in ('s', 'n'):
+while nun not in ('s', 'n'):
     print("Informação inválida. Digite novamente.")
     nun = input("[S]im\n[N]ão\n")
     print(
