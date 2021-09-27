@@ -5,7 +5,7 @@ from random import choice, randint, sample
 alfa = 'abcdefghijklmnopqrstuvwxyzç' # alfa = ascii_lowercase + 'ç'
 alfam = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ' # alfam = alfa.upper()
 simb = '*-+./,/?°]}º[{ª´~^-_=+'
-nuns = 1234567890' # digits
+nuns = 1234567890' # nuns = digits
 
 senha = []
 temp = randint(1, 4)
