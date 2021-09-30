@@ -1,11 +1,11 @@
 from time import sleep
 from random import choice, randint, sample
-# from strings import ascii_lowercase, digits
+from strings import ascii_lowercase, digits
 
-alfa = 'abcdefghijklmnopqrstuvwxyzç' # alfa = ascii_lowercase + 'ç'
-alfam = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ' # alfam = alfa.upper()
+alfa = ascii_lowercase + 'ç'                                                # alfa = 'abcdefghijklmnopqrstuvwxyzç'
+alfam = alfa.upper()                                                        # alfam = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ'
 simb = '*-+./,/?°]}º[{ª´~^-_=+'
-nuns = '1234567890' # nuns = digits
+nuns = digits                                                               # nuns = '1234567890'
 
 senha = []
 temp = randint(1, 4)
