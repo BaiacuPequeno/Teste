@@ -1,12 +1,11 @@
 from time import sleep
 from random import choice, randint, sample
+from strings import ascii_lowercase, digits
 
-alfa = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-        'w', 'x', 'y', 'z', 'ç']
-alfam = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-         'W', 'X', 'Y', 'Z', 'Ç']
-simb = ['*', '-', '+', '.', '/', ',', '/', '?', '°', ']', '}', 'º', '[', '{', 'ª', '´', '~', '^', '-', '_', '=', '+']
-nuns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+alfa = ascii_lowercase + 'ç'                                                # alfa = 'abcdefghijklmnopqrstuvwxyzç'
+alfam = alfa.upper()                                                        # alfam = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ'
+simb = '*-+./,/?°]}º[{ª´~^-_=+'
+nuns = digits                                                               # nuns = '1234567890'
 
 senha = []
 temp = randint(1, 4)
@@ -14,67 +13,48 @@ temp = randint(1, 4)
 print('\033[34m-\033[m' * 85)
 print("  Esse é um gerador de senhas simples feito por Miguel Augusto no dia (25/09/2021)")
 print('\033[34m-\033[m' * 85)
-print(
+print()
 
-)
 print("Carregando.", end="")
 for tempo in range(0, temp):
     sleep(0.6)
     print(".", end="")
-print(
+print()
 
-)
 #                       **TIPO DAS LETRAS**
 alfabet = int(input("""Voce quer sua senha com:
 [1] Apenas maiusculas
 [2] Apenas minusculas
 [3] Maiusculas e minusculas"""))
-print(
+print()
 
-)
-if alfabet != 1 and alfabet != 2 and alfabet != 3:
-    while True:
-        print("Informação inválida. Digite novamente.")
-        alfabet = int(input("""[1] Apenas maiusculas
+while alfabet not in (1, 2, 3):
+    print("Informação inválida. Digite novamente.")
+    alfabet = int(input("""[1] Apenas maiusculas
 [2] Apenas minusculas
 [3] Maiusculas e minusculas"""))
-        print(
+print()
 
-        )
-        if alfabet == 1 or alfabet == 2 or alfabet == 3:
-            break
 
-if alfabet == 1:
-    lets = randint(4, 7)
-    for let in range(0, lets):
+lets = randint(4, 7)
+
+if alfabet in (1, 3):
+    for let in range(lets):
         senha.append(choice(alfam))
 
-elif alfabet == 2:
-    lets = randint(4, 7)
-    for let in range(0, lets):
-        senha.append(choice(alfa))
-
-elif alfabet == 3:
-    lets = randint(4, 7)
-    for let in range(0, lets):
-        senha.append(choice(alfam))
+if alfabet in (2, 3):
+    for let in range(lets):
         senha.append(choice(alfa))
 
 
 #                       **SIMBOLOS**
 simbo = input("Quer que sua senha contenha simbolos como: *  -  ?  /\n[S]im\n[N]ão\n").lower()
-print(
+print()
 
-)
-if simbo != 's' and simbo != 'n':
-    while True:
-        print("Informação inválida. Digite novamente.")
-        simbo = input("[S]im\n[N]ão\n")
-        print(
-
-        )
-        if simbo == 's' or simbo == 'n':
-            break
+while simbo not in ('s', 'n'):
+    print("Informação inválida. Digite novamente.")
+    simbo = input("[S]im\n[N]ão\n")
+print()
 
 if simbo == 's':
     simbs = randint(1, 5)
@@ -86,20 +66,14 @@ elif simbo == 'n':
 
 #                       **NUMEROS**
 nun = input("Quer que sua senha contenha números?\n[S]im\n[N]ão\n").lower()
-print(
+print()
 
-)
-if nun != 's' and nun != 'n':
-    while True:
-        print("Informação inválida. Digite novamente.")
-        nun = input("[S]im\n[N]ão\n")
-        print(
+while nun not in ('s', 'n'):
+    print("Informação inválida. Digite novamente.")
+    nun = input("[S]im\n[N]ão\n")
+    print()
 
-        )
-        if nun == 's' or nun == 'n':
-            break
-
-elif nun == 's':
+if nun == 's':
     nunss = randint(3, 7)
     for nume in range(0, nunss):
         senha.append(choice(nuns))
