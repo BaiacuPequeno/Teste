@@ -45,15 +45,15 @@ print(
 lets = randint(4, 7)
 
 if alfabet == 1:
-    for let in range(0, lets):
+    for let in range(lets):
         senha.append(choice(alfam))
 
 elif alfabet == 2:
-    for let in range(0, lets):
+    for let in range(lets):
         senha.append(choice(alfa))
 
 elif alfabet == 3:
-    for let in range(0, lets):
+    for let in range(lets):
         senha.append(choice(alfam))
         senha.append(choice(alfa))
 
