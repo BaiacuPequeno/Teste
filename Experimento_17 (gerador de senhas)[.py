@@ -13,63 +13,48 @@ temp = randint(1, 4)
 print('\033[34m-\033[m' * 85)
 print("  Esse é um gerador de senhas simples feito por Miguel Augusto no dia (25/09/2021)")
 print('\033[34m-\033[m' * 85)
-print(
+print()
 
-)
 print("Carregando.", end="")
 for tempo in range(0, temp):
     sleep(0.6)
     print(".", end="")
-print(
+print()
 
-)
 #                       **TIPO DAS LETRAS**
 alfabet = int(input("""Voce quer sua senha com:
 [1] Apenas maiusculas
 [2] Apenas minusculas
 [3] Maiusculas e minusculas"""))
-print(
-
-)
+print()
 
 while alfabet not in (1, 2, 3):
     print("Informação inválida. Digite novamente.")
     alfabet = int(input("""[1] Apenas maiusculas
 [2] Apenas minusculas
 [3] Maiusculas e minusculas"""))
-print(
-
-)
+print()
 
 
 lets = randint(4, 7)
 
-if alfabet == 1:
+if alfabet in (1, 3):
     for let in range(lets):
         senha.append(choice(alfam))
 
-elif alfabet == 2:
+if alfabet in (2, 3):
     for let in range(lets):
-        senha.append(choice(alfa))
-
-elif alfabet == 3:
-    for let in range(lets):
-        senha.append(choice(alfam))
         senha.append(choice(alfa))
 
 
 #                       **SIMBOLOS**
 simbo = input("Quer que sua senha contenha simbolos como: *  -  ?  /\n[S]im\n[N]ão\n").lower()
-print(
-
-)
+print()
 
 while simbo not in ('s', 'n'):
     print("Informação inválida. Digite novamente.")
     simbo = input("[S]im\n[N]ão\n")
-print(
-
-)
+print()
 
 if simbo == 's':
     simbs = randint(1, 5)
@@ -81,15 +66,12 @@ elif simbo == 'n':
 
 #                       **NUMEROS**
 nun = input("Quer que sua senha contenha números?\n[S]im\n[N]ão\n").lower()
-print(
+print()
 
-)
 while nun not in ('s', 'n'):
     print("Informação inválida. Digite novamente.")
     nun = input("[S]im\n[N]ão\n")
-    print(
-
-    )
+    print()
 
 if nun == 's':
     nunss = randint(3, 7)
